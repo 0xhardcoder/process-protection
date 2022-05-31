@@ -40,7 +40,6 @@ class Program
 Or to crash system
 ````
 using System;
-using System.Diagnostics;
 
 class Program
 {
