@@ -10,7 +10,7 @@ class ProcessProtection
     private static extern int NtSetInformationProcess(IntPtr hProcess, int processInformationClass, ref int processInformation, int processInformationLength);
     
     [DllImport("ntdll.dll", SetLastError = true)]
-    public static extern IntPtr RtlAdjustPrivilege(int Privilege, bool bEnablePrivilege, bool IsThreadPrivilege, out bool PreviousValue);
+    private static extern IntPtr RtlAdjustPrivilege(int Privilege, bool bEnablePrivilege, bool IsThreadPrivilege, out bool PreviousValue);
 
     [DllImport("ntdll.dll")]
     private static extern uint NtRaiseHardError(
