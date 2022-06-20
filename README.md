@@ -19,17 +19,17 @@ class Program
 		while (true)
 		{
 			Console.WriteLine("Enter name of process you want to protect without .exe!");
-			string prcname = Console.ReadLine();
-			if (pcrname != "")
+			string procname = Console.ReadLine();
+			if (procname != "")
 			{
-				ProcessProtection.ProtectProcess(Process.GetProcessesByName(pcrname)[0]);
+				ProcessProtection.ProtectProcess(Process.GetProcessesByName(procname)[0]);
 				Console.WriteLine("Protected!");
 			}
 			Console.WriteLine("Enter name of process you want to unprotect without .exe!");
-			prcname = Console.ReadLine();
+			procname = Console.ReadLine();
 			if (pcrname != "")
 			{
-				ProcessProtection.UnprotectProcess(Process.GetProcessesByName(pcrname)[0]);
+				ProcessProtection.UnprotectProcess(Process.GetProcessesByName(procname)[0]);
 				Console.WriteLine("Unprotected!");
 			}
 		}
